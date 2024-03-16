@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/*configurações raiz*/
+*,
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+/*configurações do corpo*/
+body {
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #0F172A;
+  box-sizing: border-box;
+}
+
+.box_contener {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/*configurações do cabecalho*/
+header {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 0px;
+  border-bottom: solid 1px gray;
+}
+
+header img {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+header input {
+  background-color: transparent;
+  height: 35px;
+  border: none;
+  outline: none;
+  color: rgba(129, 130, 147, 0.767);
+  font-size: 20px;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+}
+
+::-webkit-input-placeholder {
+  color: rgba(129, 130, 147, 0.767);
+  font: 20px Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+}
+
+:-moz-placeholder {
+  color: rgba(129, 130, 147, 0.767);
+  font: 20px Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+}
+
+::-moz-placeholder {
+  color: rgba(129, 130, 147, 0.767);
+  font: 20px Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+}
+
+:-ms-input-placeholder {
+  color: rgba(129, 130, 147, 0.767);
+  font: 20px Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+}
+
+/*configurações do botao de adicionar nova nota*/
+main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+button.nova-nota {
+  width: 325px;
+  height: 250px;
+  background-color: #475569;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  user-select: text;
+  z-index: 1;
+
+}
+
+button.nova-nota span {
+  padding: 8px 8px 4px 8px;
+  color: whitesmoke;
+
+}
+
+button.nova-nota p {
+  padding: 0 8px;
+  color: rgb(133, 134, 144);
+  text-align: justify;
+  line-height: 1.5;
+}
+
+button.nova-nota:hover {
+  opacity: .8;
+}
+
+/*configurações das notas salvas*/
+
+button.nota {
+  width: 325px;
+  height: 250px;
+  background-color: rgb(31 41 55);
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  /*https://developer.mozilla.org/en-US/docs/Web/CSS/user-select*/
+  user-select: text;
+  border-bottom: 2px solid #00000067;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  /* Sombra suave */
+  /* Sombra interna 
+  * https://getcssscan.com/css-box-shadow-examples 
+  */
+  text-overflow: ellipsis !important;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+button.nota span {
+  padding: 8px 8px 4px 8px;
+  color: whitesmoke;
+
+}
+
+button.nota p {
+  padding: 0 8px;
+  color: rgb(133, 134, 144);
+  text-align: justify;
+  line-height: 1.5;
+  text-overflow: ellipsis !important;
+}
+
+button.nota:hover {
+  opacity: .8;
+}
+
+
+@media screen and (max-width: 380px) {
+  /* estilos */
+
+}
+
+
+@media screen and (max-width: 640px) {
+
+  /*html,
+  body {
+    overflow: hidden;
+  }
+  */
+
+  /* estilos */
+  main {
+    justify-content: center;
+  }
+
+  .modal {
+    width: 90vw !important;
+    height: 80vh !important;
+  }
+
+  .modal>textarea {
+    width: 100%;
+    /* height: 82% !important; */
+
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  /* Estilos */
+
+}
+
+/*modal configurações*/
+
+.modal {
+  position: absolute;
+  width: 50vw;
+  height: 80vh;
+  background-color: rgb(51 65 85);
+  border-radius: 5px;
+  user-select: text;
+  border-bottom: 2px solid #00000067;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  z-index: 7 !important;
+}
+
+.modal .modal_close {
+  padding: 0;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.modal .modal_close .cancelar {
+  background-color: transparent;
+  border: none;
+  color: lightcoral;
+  padding: 5px 10px;
+  font-size: 16px;
+}
+
+.modal .modal_close .sair {
+  width: 24px;
+  background-color: rgb(61, 61, 61);
+  border: none;
+  color: rgb(237, 234, 231);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.modal>textarea {
+  width: 95%;
+  height: 85%;
+  background-color: rgba(0, 0, 0, 0.107) !important;
+  color: rgb(237, 234, 231);
+  resize: none;
+  border: none;
+  outline: none;
+  padding: 0 15px;
+  overflow: hidden;
+  margin: 3px 2px !important;
+  border-radius: 5px;
+}
+
+.modal .modal_salve {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #A3E635;
+  height: 33px;
+}
+
+.modal .modal_salve button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.modal-hidden {
+  display: none;
+}
+
+/*fim modal de exibiçaõ do conteudo da nota*/
+
+
+/* Barra de rolagem lateral personalizada */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #2c2c31;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #9e9ea0;
+  border-radius: 5px;
+}
+
+/* Fim da barra de rolagem lateral personalizada */
